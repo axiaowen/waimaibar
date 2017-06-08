@@ -1,0 +1,84 @@
+.actionsheet {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 100%);
+    backface-visibility: hidden;
+    z-index: 999;
+    width: 100%;
+    background-color: #EFEFF4;
+    //slide up animation
+    transition: transform .3s;
+}
+.actionsheet_menu{
+    background-color: #FFFFFF;
+}
+.actionsheet_action {
+    margin-top: 6px;
+    background-color: #FFFFFF;
+}
+.actionsheet_cell {
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    &:before {
+			content: " ";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 1px;
+			border-top: 1px solid #d9d9d9;
+			color: #d9d9d9;
+			transform-origin: 0 0;
+			transform: scaleY(0.5);
+    }
+    &:active{
+        background-color: #ececec;
+    }
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+}
+
+//actionSheet aniamtion
+.actionsheet_toggle{
+    transform: translate(0, 0);
+}
+
+.mask {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.mask_transparent {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.mask_transition{
+  display: none;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0);
+  transition:background .3s;
+}
+
+.mask_fade_toggle{
+  background: rgba(0,0,0,.6);
+}

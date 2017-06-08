@@ -1,0 +1,19 @@
+.arrow {
+  float: right;
+  width: 5px;
+  height: 5px;
+  margin: 10px 10px 0 0;
+  border-color: #aaa;
+  border-width: 0 0 2px 2px;
+  border-style: solid;
+  transform: rotateZ(-135deg);
+  -ms-transform: rotateZ(-135deg);
+  -moz-transform: rotateZ(-135deg);
+  -webkit-transform: rotateZ(-135deg);
+  -o-transform: rotateZ(-135deg);
+}
+
+.arrow.btn {
+  border-color: #fff;
+  margin: 10px 0px 10px 2px;
+}

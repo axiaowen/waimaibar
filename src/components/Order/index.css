@@ -1,0 +1,71 @@
+.order-status {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.order-btn-area {
+    text-align: center;
+    padding: 10px;
+}
+
+.order-btn {
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+    padding: 5px 12px;
+    margin: 5px 0px;
+    font-size: 14px;
+    color: #888888;
+}
+
+.order-section {
+    background-color: #fff;
+    font-size: 16px;
+    color: #666;
+    margin: 0px 0px 10px 0px;
+    padding-bottom: 5px;
+}
+
+.order-section-title {
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.order-items {
+    border-bottom: 1px solid #eee;
+}
+
+.order-item {
+    margin: 15px 10px;
+    line-height: 110%;
+}
+
+.order-name {
+}
+
+.order-item.food {
+    margin-right: 90px;
+}
+
+.order-quantity {
+    position: absolute;
+    right: 70px;
+}
+
+.order-price {
+    position: absolute;
+    right: 10px;
+}
+
+.order-final {
+    font-weight: bold;
+    text-align: right;
+    padding: 8px 10px 0px 10px;
+    color: #df3d38;
+}
+
+.order-content {
+    position: absolute;
+    left: 90px;
+}

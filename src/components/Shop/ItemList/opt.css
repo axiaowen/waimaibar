@@ -1,0 +1,41 @@
+.box {
+    float: right;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    text-align: center;
+    margin: 3px;
+}
+
+.add {
+    line-height: 65%;
+    font-size: 24px;
+    color: #fff;
+    background-color: #198774;
+    border: 1px solid #198774;
+}
+
+.dec {
+    line-height: 145%;
+    font-size: 14px;
+    color: #fff;
+    background-color: #75b7ab;
+    border: 1px solid #75b7ab;
+}
+
+.num {
+    font-size: 12px;
+}
+
+.text {
+    font-size: 12px;
+    width: 50px;
+    color: #fff;
+    background-color: #198774;
+    border: 1px solid #198774;
+}
+
+.disabled {
+    opacity: 0.5;
+}

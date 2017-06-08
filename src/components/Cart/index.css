@@ -1,0 +1,108 @@
+.section {
+    position: relative;
+    background-color: #fff;
+    color: #198774;
+    line-height: 110%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 2px
+}
+
+.section-title {
+    position: absolute;
+    width: 32px;
+    height: 55px;
+    line-height: 110%;
+    display: table
+}
+
+.section-body {
+    margin-left: 50px;
+    margin-right: 20px;
+    height: 35px
+}
+
+.section-note {
+    color: #198774;
+    font-size: 15px;
+    line-height: 110%;
+    padding: 8px 0
+}
+
+.section-text {
+    color: #bbb;
+    font-size: 15px;
+    padding-top: 9px;
+}
+
+.section-head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.section-items {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0 5px 0;
+}
+
+.section-item {
+    color: #555;
+    margin: 5px 0 10px 0;
+}
+.section-foot {
+    height: 20px;
+    padding: 10px 0;
+}
+
+.section-total {
+    float: left;
+    padding-top: 8px;
+}
+
+.section-amount {
+    color: #555;
+    padding-top: 8px;
+    margin-right: 5px;
+    float: right;
+}
+
+.section-name {
+    margin-right: 100px;
+}
+
+.section-quantity {
+    position: absolute;
+    right: 70px;
+}
+
+.section-price {
+    position: absolute;
+    right: 15px;
+}
+
+.section-school {
+    position: absolute;
+    margin-top: -1px;
+    background-color: #198774;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1px 3px 0 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-upload {
+    float: right;
+    margin: 5px 10px;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #198774;
+}
+
+.btn-upload.disable {
+    background-color: #aaa;
+    color: #fff;
+}
