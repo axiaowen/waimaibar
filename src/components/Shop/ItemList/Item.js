@@ -50,8 +50,10 @@ class Item extends Component {
 					<strong>{name}</strong>
 				</div>
 				<div className="item-description">
-					{labels.map(label =>
-						<span className='item-label'>{label}</span>)}
+					{labels
+						? labels.map(label =>
+							<span className='item-label'>{label}</span>)
+						: ''}
 					{description
 						?	<span>{description}</span>
 						: ''}

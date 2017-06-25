@@ -54,7 +54,7 @@ config.plugins.push(
     allChunks : true // 若要按需加载 CSS 则请注释掉该行
   }),
   new HtmlWebpackPlugin({
-    filename: '../../../GO/bin/templates/app.html',
+    filename: '../../../../WAIMAI/BACKEND/templates/develop.html',
     template: config.commonPath.indexHTML,
     chunksSortMode: 'none'
   })

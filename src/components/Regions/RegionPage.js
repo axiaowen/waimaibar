@@ -29,17 +29,18 @@ export default class HomePage extends Component {
 				position: 'fixed',
 				top: '0',
 				width: '100%',
-				padding: '2px',
-				height: '47px',
+				paddingBottom: '10px',
+				height: '20px',
         borderBottom: '1px solid #ccc',
 				backgroundColor: '#373b3e'
 			},
       title: {
-        textAlign: 'center',
-				color: '#ccdad9'
-      },
+        // textAlign: 'center',
+        marginLeft: 60,
+				color: '#fff'
+			},
       areas: {
-        marginTop: '50px'
+        marginTop: '30px'
       },
       area: {
 				padding: '15px 10px',
@@ -66,7 +67,7 @@ export default class HomePage extends Component {
 			<div>
 				<div style={style.bar}>
 					<div style={style.title}>
-						<strong>请选择地址</strong>
+						{/* <strong>请选择地址</strong> */}
             <div style={{fontSize: '12px'}}>
               请选择你所在的学校校区
             </div>

@@ -3,7 +3,7 @@
 	color: #888;
 	font-size: 12px;
 	font-weight: bold;
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .home-bar {
@@ -101,7 +101,7 @@
 .region-panel-buttons {
 	display: flex;
 	padding: 5px 20px;
-	fontSize: 14px;
+	font-size: 14px;
 }
 
 .region-panel-btn-stay {

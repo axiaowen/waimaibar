@@ -33,7 +33,7 @@ module.exports = {
   },
   output: {
     path: path.join(commonPath.dist, 'static'),
-    publicPath: '/'
+    publicPath: '/static'
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],

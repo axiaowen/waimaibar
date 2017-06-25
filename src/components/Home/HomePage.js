@@ -18,14 +18,14 @@ const HomeBar = ({ region, categories, selectedCate }) => (
 			<div className='shops-category'>
 				{selectedCate == category.id
 					? <div className='shops-selected-category'>
-							{category.name}
-						</div>
+						{category.name}
+					</div>
 					: <div onClick={() => {
-							this.setState({category: category.id})
-							this.fetchShops(category.id, region)
-						}}>
-							{category.name}
-						</div>}
+						this.setState({category: category.id})
+						this.fetchShops(category.id, region)
+					}}>
+						{category.name}
+					</div>}
 			</div>)}
 	</div>
 )
@@ -45,13 +45,12 @@ export class HomePage extends Component {
 	}
 
 	componentWillMount() {
-		document.title = '外卖榜'
+		document.title = '外卖吧'
 		let storage = localStorage.getItem('region')
 		if (storage && storage.id != 0 && storage != 'undefined') {
 			let region = JSON.parse(storage)
 			this.setState({region: region})
 			this.fetchRegion(region)
-			this.fetchShops(this.state.category, region)
 		} else {
 			window.location.href = '#/region'
 		}
@@ -86,17 +85,18 @@ export class HomePage extends Component {
 		fetch(`api/region?id=${region.id}`)
 			.then(res => res.json())
 			.then(data => {
-				localStorage.setItem('region', JSON.stringify(data))
+				localStorage.setItem('region', JSON.stringify(data.region))
 				// if (data.category.length == 1) {
 				// 	data.category.push({id:0, name:''})
 				// }
-				this.setState({region: data})
+				this.setState({region: data.region})
+				this.fetchShops(this.state.category, data.region.id)
 			})
 	}
 
-	// componentDidMount() {
-	// 	this.fetchShops()
-	// }
+	componentDidMount() {
+		this.fetchShops()
+	}
 
 	closeRegNotify() {
 		this.setState({showRegModal: false})
@@ -114,10 +114,10 @@ export class HomePage extends Component {
 		}
 	}
 
-	fetchShops(category, region) {
+	fetchShops(category, regionid) {
 		// if (this.props.shops.length == 0) {
 			this.props.requestShops()
-			fetch(`api/shops?category=${category}&region=${region.id}`)
+			fetch(`/api/shops?region=${regionid}`)
 				.then(res => res.json())
 				.then(data => this.props.receiveShops(data))
 
@@ -135,21 +135,21 @@ export class HomePage extends Component {
 					region={region}
 					selectedCate={this.state.category}
 					categories={this.state.categories} />
-				<div className='shops-area'>
-					{false
-						?	<div style={{margin: '0 4px -7px 4px'}}>
-								<img className='home-banner' src='' />
+				{/* <div style={{margin: '0 4px -7px 4px'}}> */}
+					{/* <img className='home-banner' src='' /> */}
+				{/* </div> */}
+				{fetching
+					? ''
+					: <div>
+							<div className='shops-area'>
+								{shops.map((shop, index) =>
+									<ShopNode
+										key={shop.id}
+										index={index}
+										shop={shop} />)}
 							</div>
-						: ''}
-					{fetching
-						? ''
-						: shops.map((shop, index) =>
-							<ShopNode
-								key={shop.id}
-								index={index}
-								shop={shop} />)}
-				</div>
-				<div className="icp-bottom">- 粤ICP备17011195号 -</div>
+							{/* <div className="icp-bottom">- 粤ICP备17011195号 -</div> */}
+						</div>}
 				<ActionSheet show={showRegModal}>
 					<div className='region-panel'>
 						<div className='region-panel-close' onClick={this.closeRegNotify}>

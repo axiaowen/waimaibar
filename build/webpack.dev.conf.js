@@ -33,6 +33,17 @@ config.module.loaders.push({
   loader: 'style!css!sass'
 });
 
+config.devServer = {
+  hot: true,
+  inline: true,
+  proxy: {
+    '/api/*': {
+      target: 'http://waimaibar.com',
+      secure: false
+    }
+  }
+}
+
 config.plugins.push(
   new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
