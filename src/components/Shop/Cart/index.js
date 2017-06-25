@@ -8,7 +8,8 @@ export default class Cart extends Component {
 		return (
 			<div className="cart">
         <span className="cart-icon">
-          <img style={{width: '18px', margin: '4px 0 0 -2px'}} src='' />
+          <img style={{width: '18px', margin: '4px 0 0 -2px'}}
+              src={require('ASSET/cart.png')} />
 						{cart.quantity == 0
 							? ''
 							: <span className="cart-quantity">{cart.quantity}</span>}

@@ -29,28 +29,29 @@ export default class ItemList extends Component {
 
 	render() {
 		const { ids, items } = this.props
-		const category = ids[this.state.category]
+		const selectedCate = this.state.category
 		return (
-			<div className='container2' id='container'>
+			<div className='container' id='container'>
 				<div>
-					<div className='categories2' id='categories'>
+					<div className='categories' id='categories'>
 						{ids.map((category) => {
-							const selected = this.state.category == category.id - 1 ? 'selected2' : ''
+							const selected = (selectedCate == category.id - 1 ? 'selected' : '')
 							return (
-								<div className={'category2 ' + selected}
+								<div className={'category ' + selected}
 									onClick={()=> this.setState({category: category.id - 1})}>
 									{category.name}
 								</div>)})}
 					</div>
-					<div className='items2' id='items'>
-						{category.items.map((id) =>
+					<div className='items' id='items'>
+						{ids[selectedCate].items.map((id) =>
 							<Item
 								key={id}
 								item={items[id]}
+								category={ids[selectedCate]}
 								style={{
 									padding: '8px',
 									borderBottom: '1px solid #eee'}}
-								category={category} />)}
+							/>)}
 					</div>
 				</div>
 			</div>

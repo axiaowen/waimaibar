@@ -46,9 +46,7 @@ class Item extends Component {
 				{imgUrl
 					?	<img style={style.img} src='' />
 					: ''}
-				<div style={style.text}>
-					<strong>{name}</strong>
-				</div>
+				<div style={style.text}>{name}</div>
 				<div className="item-description">
 					{labels
 						? labels.map(label =>

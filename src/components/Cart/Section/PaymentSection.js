@@ -13,52 +13,37 @@ export default class Address extends Component {
 	}
 	render() {
 		const { paytype } = this.state
-		const payments = [{name: '微信支付', isValid: true}]
+		const { payments } = this.props
 		return (
 			<div className="section">
-				<div className="section-title">
+				<div className="section-title" style={{paddingTop: 8}}>
 					支付方式
 				</div>
-				<div className="section-body">
-					{false
-						? payments.map((payment) =>
-							<div
-								style={{padding: '2px 0', color: (paytype == payment.id ? '#198774' : '#aaa')}}
+				<div className="section-body" style={{height: 50}}>
+					{payments.map((payment) =>
+						<div style={{padding: '2px 0', color: (paytype == payment.id ? '#198774' : '#aaa')}}
 								onClick={() => {
 									if (payment.is_valid) {
 										this.setState({paytype: payment.id})
 									}
 								}}>
-								<div className='checkbox'>
-									<input type='checkbox' checked={paytype == payment.id} />
-									<label
-										for='checkbox'
+							<div className='checkbox'>
+								<input type='checkbox' checked={paytype == payment.id} />
+								<label for='checkbox'
 										style={{background: paytype == payment.id ? '#198774' : '#e5ecec'}}></label>
-								</div>
-								<div style={{margin: '2px 0px'}}>
-									{payment.isValid
-										? <div>
+							</div>
+							<div style={{margin: '2px 0px'}}>
+								{payment.is_avaliable
+									? <div>
 											{payment.name}
 											<small>{payment.desc}</small>
 										</div>
-										: <s>
+									: <s>
 											{payment.name}
 											<small>{payment.desc}</small>
 										</s>}
-								</div>
-							</div>)
-						: <div
-								style={{padding: '8px 0', color: '#198774'}}>
-								<div className='checkbox'>
-									<input type='checkbox' checked={true} />
-									<label
-										for='checkbox'
-										style={{background: '#198774'}}></label>
-								</div>
-								<div style={{margin: '2px 0px'}}>
-									货到付款
-								</div>
-							</div>}
+							</div>
+						</div>)}
 				</div>
 			</div>
 		)

@@ -5,20 +5,18 @@ import React, { Component } from 'react'
 
 import TimeModal from '../TimeModal'
 
-export default class Address extends Component {
+export default class TimeSection extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			time: '',
 			showModal: false
 		}
-		// 	this.submitOrder= this.submitOrder.bind(this)
-		// 	this.setAddress= this.setAddress.bind(this)
+
 	}
 	render() {
 		const { time, showModal } = this.state
-		const timelist = []
-		const status = '接受预'
+		const { timelist } = this.props
 		return (
 		<div className="section">
 			<div className="section-title">送餐时间</div>

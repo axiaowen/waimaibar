@@ -41,6 +41,7 @@ class CartPage extends Component {
 		}
 
 		let order = {
+			'openid': '',
 			'phone': tel,
 			'address': address,
 			'id': shop.id,
@@ -61,8 +62,10 @@ class CartPage extends Component {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
 			body: data
-		}).then(res => {
+		}).then(res => res.json())
+			.then(data => {
 			window.location.href = '#/confirm'
+			localStorage.setItem("order", data.id)
 		}).catch(error => {
 			console.log(error)
 			alert('无法提交订单')
@@ -82,9 +85,9 @@ class CartPage extends Component {
 				<div style={{marginBottom: '50px'}}>
 					<CartItem cart={cart} />
 					<AddressSection />
-					<TimeSection />
-					<NoteSection setNote={this.setNote.bind(this)}/>
-					<PaymentSection />
+					<TimeSection timelist={shop.schedule} />
+					<NoteSection setNote={this.setNote.bind(this)} />
+					<PaymentSection payments={shop.payments} />
 				</div>
 				<div className="bar">
 					<a href={`#shop/${shop.id}`} className="btn-back">

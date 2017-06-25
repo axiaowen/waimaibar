@@ -148,7 +148,7 @@ export class HomePage extends Component {
 										index={index}
 										shop={shop} />)}
 							</div>
-							{/* <div className="icp-bottom">- 粤ICP备17011195号 -</div> */}
+							{/* <div className="icp-bottom">- 粤ICP备00000000号 -</div> */}
 						</div>}
 				<ActionSheet show={showRegModal}>
 					<div className='region-panel'>
