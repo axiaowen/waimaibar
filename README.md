@@ -4,12 +4,12 @@
 
 > ### 项目效果
 <div>
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/region-page.jpg" width="200"/>
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/home-page.jpg" width="200" />
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/shop-page.jpg" width="200" />
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-page.jpg" width="200" />
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-address.jpg" width="200" />
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-time.jpg" width="200" />
-<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/confirm-page.jpg" width="200" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/region-page.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/home-page.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/shop-page.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-page.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-address.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/cart-time.jpg" width="200" style="border:2px solid #393A3F" />
+<img src="https://github.com/hsiaovin/waimaibar-web/raw/master/demo/confirm-page.jpg" width="200" style="border:2px solid #393A3F" />
 </div>
 
